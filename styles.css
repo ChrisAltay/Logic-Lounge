@@ -1,0 +1,1282 @@
+
+/* Homepage styles*/
+
+/* Sets basic styles for the body element */
+* {  
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#Main {
+    background-image: url("Wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.bubbles img {
+    user-select: none;
+    width: 50px;
+    animation: bubbleFall 3s linear infinite;
+    transition: 1s;
+}
+
+.bubbles img:hover {
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: 1s;
+}
+
+.bubbles  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    position: absolute;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    bottom: 1px;
+}
+
+@keyframes bubbleFall{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;   
+    }
+}
+
+.bubbles img:nth-child(1) {
+    animation-delay: 2s;
+    width: 25px;
+} 
+
+.bubbles img:nth-child(2) {
+    animation-delay: 4s;
+    width: 75px;
+} 
+
+.bubbles img:nth-child(3) {
+    animation-delay: 1s;
+    width: 10px;
+} 
+
+.bubbles img:nth-child(4) {
+    animation-delay: 7s;
+    width: 40px;
+} 
+
+.bubbles img:nth-child(5) {
+    animation-delay: 3.5s;
+    width: 150px;
+} 
+
+.bubbles img:nth-child(6) {
+    animation-delay: 3s;
+    width: 75px;
+} 
+
+.bubbles img:nth-child(7) {
+    animation-delay: 5s;
+    width: 5px;
+}
+
+
+.HomeContent, .AboutUs, .ChatPage, .SendPrivMes, .SignInSignUp, .JavaChat, .PythonChat, .SQLChat, .EditMes, .HTMLCSSCHAT, .editmes, .LoggedInNotif, .privmeshead, .forgotpass{
+    flex: 1;
+}
+
+/* Styles for the header */
+.NV {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    padding: 1rem; /* Responsive padding */
+    padding-top: 2%;
+    position: relative;
+    z-index: 1000;
+    margin-top: -4%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align logo to the start */
+}
+
+.Logo img {
+    width: 9rem; /* Responsive width for your logo */
+    height: auto; /* Height will scale proportionally */
+    border-radius: 90%;
+    transition: transform 0.3s ease;
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+}
+
+.Logo img:hover {
+    transform: perspective(200px) rotateX(20deg) rotateY(20deg);
+    box-shadow: 4px 4px 2px#000000;
+
+}
+
+.nav-container {
+    /* Container for the nav to align it to the right */
+    margin-left: auto; /* This will push the nav-container to the right */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for navigation links */
+nav a {
+    color: #ffffff;
+    border: solid;
+    border-color: transparent;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Responsive padding around links */
+    margin-left: 0.5rem; /* Responsive spacing between links */
+    border-radius: 0.3125rem; /* Rounded corners for links */
+    transition: background-color 0.3s;
+    font-size: 1.4rem; /* Responsive font size */
+}
+
+/* Styles for navigation links on hover */
+nav a:hover {
+    border-color:#03aaa8;
+    box-shadow: 2px 2px 2px #000000;
+}
+
+/* Padding-top for the body to avoid overlap with the fixed header */
+body {
+    padding-top: 4.375rem; /* Adjust this value to the height of your header */
+}
+
+
+.HomeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    text-align: center; /* Center text */
+    margin-top: -6.5%;
+}
+
+.MainHead {
+    font-size: 5.5rem; /* Responsive font size for the heading */
+    margin-bottom: 1rem; /* Spacing below the heading */
+    font-family: 'Baloo 2', cursive; /* Sets the bubbly font */
+    color: #ffffff;
+    text-shadow: 8px 8px 2px rgba(0,0,0,0.5)
+}
+
+.tilt {
+    display: inline-block;
+    transition: transform 0.1s ease;
+  }
+
+.tilt:hover {
+    transform: rotate(-17deg);
+  }
+
+.HomePara {
+    font-size: 1.90rem; /* Responsive font size for the paragraph */
+    font-weight: 600;
+    margin-bottom: 7rem; /* Spacing below the paragraph */
+    font-family: 'Baloo 2', cursive; 
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5)
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f1eaea; /* Button background color */
+    color: #03aaa8; /* Button text color */
+    padding: 0.5rem 1rem; /* Padding inside the buttons */
+    margin: 1rem; /* Spacing between buttons */
+    border-radius: 25%; /* Rounded corners for buttons */
+    font-size: 1.70rem; /* Button font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    box-shadow: #333;
+    text-shadow: 0.125rem 0.125rem 0.375rem rgba(0, 0, 0, 0.8);
+    border: 0.2rem solid rgb(160, 160, 160);
+    box-shadow: 0.450rem 0.450rem 0.75rem #444444;
+    
+}
+
+.button:hover {
+    background-color: #777; /* Button background color on hover */
+}
+
+/* Styles for the hamburger menu */
+.hamburger-menu {
+    display: none; /* Hidden by default, will be shown in media query for smaller screens */
+    font-size: 4rem; /* Size of the hamburger icon */
+    background: none;
+    border: none;
+    color: #ffffff; /* Color of the hamburger icon */
+    cursor: pointer;
+}
+
+/* Container for nav-links, will be toggled on small screens */
+.nav-links {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Media query for max-width 768px */
+@media (max-width: 768px) {
+
+
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    /* Adjust logo container for mobile */
+    .logo-container {
+        left: 0;
+        z-index: -1; /* Send it behind the hamburger menu */
+    }
+
+    /* Hide the navigation links by default */
+    .nav-links nav {
+        display: none;
+        position: absolute;
+        background: linear-gradient(45deg, #00fffb, #000000);
+        top: 4rem; /* Position right below the hamburger menu */
+        right: 0;
+        width: 100%; /* Full width of the container */
+        text-align: center;
+        border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    }
+
+    /* Adjust logo size */
+    .Logo img {
+        width: 6rem;
+        margin-left: 3%;
+        height: auto;
+        transform: none; /* Remove the 3D effect */
+    }
+
+    /* Make nav links stack vertically */
+    .nav-links nav a {
+        display: block;
+        padding: 0.5rem;
+        margin: 0;
+        border: none;
+    }
+
+    /* Show nav-links when active */
+    .nav-links.active nav {
+        display: block;
+    }
+
+    /* Header adjustments */
+    .NV {
+        padding-top: 1rem; /* Less padding at the top */
+    }
+
+    /* Main heading adjustments */
+    .MainHead {
+        font-size: 3.5rem; /* Smaller font size for the heading */
+        text-shadow: 5px 5px 1.5px rgba(0,0,0,0.5);
+    }
+
+    /* Paragraph adjustments */
+    .HomePara {
+        font-size: 1.5rem; /* Smaller font size for the paragraph */
+        margin-bottom: 4rem; /* Less spacing below the paragraph */
+        text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Button adjustments */
+    .button {
+        padding: 0.4rem 0.8rem; /* Smaller padding inside the buttons */
+        font-size: 1.2rem; /* Smaller button font size */
+        margin: 0.5rem; /* Less spacing between buttons */
+        border: 0.15rem solid rgb(160, 160, 160); /* Thinner border */
+        box-shadow: 0.225rem 0.225rem 0.375rem #444444; /* Smaller shadow */
+    }
+
+    /* Navigation links adjustments */
+    nav a {
+        font-size: 1rem; /* Smaller font size for nav links */
+        padding: 0.4rem 0.7rem; /* Smaller padding for nav links */
+        margin-left: 0.3rem; /* Smaller spacing between links */
+        border: none; /* Remove border */
+        box-shadow: none; /* Remove box-shadow */
+    }
+
+    /* Adjust body padding to avoid overlap with the fixed header */
+    body {
+        padding-top: 3.5rem; /* Adjust padding-top for smaller screens */
+    }
+
+
+    /* Remove hover effects for better mobile experience */
+    .Logo img:hover, .button:hover, nav a:hover {
+        transform: none;
+        box-shadow: none;
+        background-color: inherit;
+    }
+
+
+    footer {
+        padding: 0.2rem; /* Adjust padding for smaller screens */
+        width: 100vw; /* Ensure footer takes the full viewport width */
+        justify-content: left;
+        box-sizing: border-box; /* Includes padding in the width calculation */
+    }
+
+    /* If you have a separate container for links, ensure they are also centered */
+    .footerlinks {
+        display: flex; /* Enables flexbox layout */
+        justify-content: center; /* Centers items vertically */
+        align-items: center; /* Centers items horizontally */
+    }
+
+    .footerlinks a {
+        margin-bottom: 0.5rem; /* Adds space between links */
+        text-align: center; /* Ensure text is centered within each link */
+    }
+
+}
+
+/* Additional Media Query for Large Devices */
+@media (min-width: 1440px) {
+
+    .HomeContent {
+        margin-right: 2.5%;
+    }
+    
+    .SignInSignUp {
+
+        width: 40%; /* Decrease the width for larger screens if needed */
+        min-height: 50vh; /* Decrease the height for larger screens if needed */
+           
+    }
+}
+
+
+
+/*SignInSignUp (SISU) styles*/
+.SISU {
+    background: linear-gradient(45deg, #00fffb, #000000);
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.SignInSignUp {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: center;
+    align-items: center;
+    width: 50%;       
+    min-height: 60vh; 
+    margin: auto;      
+    margin-bottom: 5%;
+    background-color: #ffffff;
+    border-radius: 10%;
+    box-shadow: 6px 6px 4px#000000;
+}
+
+.LeftBox h2 {
+    margin-bottom: 5%;
+}
+
+.RightBox h2 {
+    margin-bottom: 5%;
+}
+
+form input {
+    border: none;
+    margin: 1px 0;
+    padding: 0.8125rem; 
+    background: #ebe7e7;
+    font-size: 1.2rem; 
+    border-radius: 1rem; 
+}
+
+form input:hover{
+    border: solid #d3d5de;
+}
+
+.CreateAccButton {
+    padding: 0.9375rem; 
+    background: linear-gradient(45deg, #ffffff, #00fffb);
+    color: #054a49;
+    font-size: 1.125rem; 
+    border: none;
+    cursor: pointer;
+    width: 9.375rem; 
+    margin: 0.625rem auto 0; 
+    border-radius: 1.875rem; 
+    box-shadow: -0.375rem 0.375rem 0.75rem #565454;       
+    transition: background-color 0.3s ease;
+}
+
+.CreateAccButton:hover {
+    background: linear-gradient(45deg, #bbb8b8, #03aaa8);
+    border: solid;
+    border-color: #ffffff;
+}
+
+.LogInButton {
+    padding: 0.9375rem; 
+    background: linear-gradient(45deg, #00fffb, #000000);
+    color: #ffffff;
+    font-size: 1.125rem; 
+    border: none;
+    cursor: pointer;
+    width: 9.375rem; 
+    margin: 0.625rem auto 0; 
+    border-radius: 1.875rem; 
+    box-shadow: -0.375rem 0.375rem 0.75rem #565454;       
+    transition: background-color 0.3s ease;
+}
+
+.LogInButton:hover {
+    background: linear-gradient(45deg, #03a19f, #000000);
+    border: solid;
+    border-color: #ffffff;
+}
+
+.message-overlay {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioning relative to its nearest positioned ancestor */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 20; /* Above other content */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.message-box {
+    background-color: white;
+    padding: 14px;
+    width: 40%;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.ErrorBttn {
+    font-size: 1.2rem;
+    border-radius: 20%;
+    padding: 2%;
+    box-shadow: 3px 3px 4px #000000;
+}
+
+.ErrorBttn:hover {
+    background-color: #bbb8b8;
+}
+
+
+/*Abous Us Sytles*/
+.AboutBody {
+    background: linear-gradient(45deg, #00fffb, #000000);
+}
+
+.AboutUs h2 {
+    margin-bottom: 1%;
+    color: #000000;
+}
+
+.AboutUs h1, h2, p{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.AboutUs h1 {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.AboutUs h2 {
+    font-size: 2rem
+}
+
+.AboutUs p {
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 1.90rem; /* Responsive font size for the paragraph */
+ font-weight: 600; 
+ font-family: 'Baloo 2'; 
+ margin-bottom: 2%;
+}
+
+.Container {
+    background-color: #3e3d3d;
+}
+
+.AboutH2 {
+  width: 150%;
+  padding-top: 5%;
+  padding-bottom: 12%;
+}
+
+.img1, .img2, .img3, .img4, .img5 {
+    width: 18rem;
+    height: auto;
+}
+
+.img1 {
+    margin-left: 8%;
+    border-radius: 50%; 
+}
+
+.ChrisSection {
+    display: flex;
+    flex-direction: row;
+    gap: 18%;
+    margin-left: 6.5%;
+    margin-bottom: 3%;
+    padding-top: 2%;
+}
+
+.ChrisPhoto p{
+    width: 150%;
+}
+
+.ChrisInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+    margin-right: 18%;
+    width: 150%;
+    justify-content: center;
+}
+
+.ChrisInfo p {
+    justify-content: center;
+}
+
+
+.img2 {
+    margin-left: 8%;
+    border-radius: 50%; 
+}
+
+.SolomonSection {
+    display: flex;
+    flex-direction: row;
+    gap: 18%;
+    margin-left: 6.5%;
+    margin-bottom: 3%;
+    padding-top: 2%;
+}
+
+.SolomonPhoto p{
+    margin-left: 5%;
+    width: 150%;
+}
+
+.SolomonInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 18%;
+    width: 150%;
+    justify-content: center;
+}
+
+.SolomonInfo p {
+    justify-content: center;
+}
+
+.img3 {
+    margin-left: 8%;
+    border-radius: 50%; 
+}
+
+.ErickSection {
+    display: flex;
+    flex-direction: row;
+    gap: 18%;
+    margin-left: 6.5%;
+    margin-bottom: 3%;
+    padding-top: 2%;
+}
+
+.ErickPhoto p{
+    margin-left: 20%;
+    width: 150%;
+}
+
+.ErickInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 18%;
+    width: 150%;
+    justify-content: center;
+}
+
+.ErickInfo p {
+    justify-content: center;
+}
+
+.img4 {
+    margin-left: 8%;
+    border-radius: 50%; 
+}
+
+.AndySection {
+    display: flex;
+    flex-direction: row;
+    gap: 18%;
+    margin-left: 6.5%;
+    margin-bottom: 3%;
+    padding-top: 2%;
+}
+
+.AndyPhoto p{
+    margin-left: 20%;
+    width: 150%;
+}
+
+.AndyInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 18%;
+    width: 150%;
+    justify-content: center;
+}
+
+.AndyInfo p {
+    justify-content: center;
+}
+
+.img5 {
+    margin-left: 8%;
+    border-radius: 50%; 
+}
+
+.BallaSection {
+    display: flex;
+    flex-direction: row;
+    gap: 18%;
+    margin-left: 6.5%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.BallaPhoto p{
+    margin-left: 20%;
+    width: 150%;
+}
+
+.BallaInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 18%;
+    width: 150%;
+    justify-content: center;
+}
+
+.BallaInfo p {
+    justify-content: center;
+}
+
+.link, .linkP, .linkL{
+    display: flex;
+    color: #000000;
+    font-size: 1.95rem;
+    margin: 1.5rem; /* Provides spacing around icons */
+    padding: 2%;
+    border-radius: 25%;
+    align-items: center;
+    box-shadow: 6px 6px 4px #000000;
+}
+
+.centerlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.link {
+    background-color: #9000ff;
+    font-size: 1.20rem; 
+}
+
+.linkP {
+    background-color: #00fffb;
+}
+
+.linkL {
+    background-color: #1e36a0;
+}
+
+
+.link:hover {
+    background-color: #53028a;
+    border: solid;
+    border-color: #d3d5de;
+}
+
+.linkP:hover {
+    background-color: #047594;
+    border: solid;
+    border-color: #d3d5de;
+}
+
+.linkL:hover {
+    background-color: #4b74db;
+    border: solid;
+    border-color: #d3d5de;
+}
+
+
+/*ChatRoom Styles*/
+
+.ChatsBody {
+        background-image: url("RegWall.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-position: center; 
+}
+
+.ChatPage {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4%;
+    align-items: center; 
+}
+
+.ChatHeader h1 {
+    margin-bottom: 12%;
+    color: rgb(0, 0, 0);
+    font-size: 2.1rem;
+    
+}
+
+.Chats {
+    width: 78%;
+}
+
+.Chats h2 {
+    font-size: 1.8rem;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.Chats nav {
+    justify-content: center;
+}
+
+.Chats a {
+    display: inline-block; /* Allows padding and margin to be applied */
+    margin: 5%; /* Space between chat links */
+    padding: 2% 2% 5% 2%; /* Padding around text */
+    background: linear-gradient(45deg, #000000, #00ffee);
+    border-radius: 25px; /* Rounded corners for chat links */
+    text-decoration: none; /* Removes underline from links */
+    color: #ffffff; /* Text color for links, change as desired */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 6px 6px 4px black;
+}
+
+.Chats a:hover {
+    
+    transform: scale(1.6); /* Slightly enlarges on hover */
+    box-shadow: 0 0 1.25rem #fff, 0 0 1.875rem #fff, 0 0 2.5rem #ffffff;
+}
+
+.ChatRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px; /* Space between chat links and rules */
+    width: 100%; /* Full width of the container */
+    height: 100%;
+}
+
+.ChatRules p{
+    justify-content: left;
+    font-size: 1.7rem;
+}
+
+.ChatRules li {
+    font-size: 1.7rem;
+}
+
+
+@media (max-width: 768px) {
+    .Chats a {
+        display: block; /* Stack the links on smaller screens */
+        margin: 10px 0; /* Margin only top and bottom */
+    }
+}
+
+@media (min-width: 1440px) {
+
+}
+
+
+/*Java Chat Styles*/
+
+.JavaBody, .SqlBody, .PythonBody, .HtmlCssBody {
+        background-image: url("DiamondWall.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-position: center; 
+}
+
+.JavaBody form, .SqlBody form, .PythonBody form, .HtmlCssBody form{
+    display: flex;
+    width: 28%;
+    border-radius: 20%;
+    margin-left: 69%;
+    margin-bottom: 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 5px 5px 4px black;
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form textarea {
+    height: 28vh;
+    width: 22vw;
+    font-size: 1.5rem;
+    border-radius: 5%;
+}
+
+form textarea:hover {
+    border: solid;
+    border-color: grey;
+}
+
+.MesButton {
+    display: flex;
+    height: 6vh;
+    width:  8vw;
+    margin-top: 5%;
+    color: white;
+    background: linear-gradient(45deg, #00fffb, #000000);
+    box-shadow: 4px 4px 4px #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+/*update message button on edit message page after you press the edit link*/
+.mesbutton {
+    display: flex;
+    height: 6vh;
+    width:  9vw;
+    margin-top: 5%;
+    color: white;
+    background: linear-gradient(45deg, #00fffb, #000000);
+    box-shadow: 4px 4px 4px #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+.MesButton:hover {
+    background: linear-gradient(45deg, #036f6d, #000000);
+}
+
+.JavaChat, .SQLChat, .PythonChat, .HTMLCSSCHAT, .editmes {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.JavaChat h1, .SQLChat h1, .PythonChat h1, .HTMLCSSCHAT h1, .editmes h1, .SendPrivMes h1, .forgotpass h1{
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    font-family: 'bubblegum Sans'; 
+}
+
+.HTMLCSSCHAT {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+}
+
+.chat-message {
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px; /* Padding around the text */
+    margin-bottom: 10px; /* Spacing between messages */
+    border-radius: 10px; /* Rounded corners */
+    word-wrap: break-word; /* Prevents long words from overflowing */
+    margin-left: 2%;
+    width: 65%;
+    max-width: 100%; /* Ensures the message box doesn't exceed the container width */
+    line-height: 1.5; /* Spacing between lines of text */
+    overflow-wrap: break-word; /* Ensures text breaks to prevent overflow */
+}
+
+.timestamp {
+    margin-left: 10%; /* Adjust the value to create the desired spacing */
+    font-size: 1rem;
+    
+}
+
+/*this is for the edit and del links next to each message in chat */
+.EditMes {
+    color: #007bff; /* Example color for Edit links */
+    text-decoration: none; /* Optional: if you want to remove the underline */
+}
+
+.EditMes:hover {
+    color: #0056b3; /* Darker color on hover for Edit links */
+}
+
+.DelMes {
+    color: #dc3545; /* Example color for Delete links */
+    text-decoration: none; /* Optional: if you want to remove the underline */
+}
+
+.DelMes:hover {
+    color: #bd2130; /* Darker color on hover for Delete links */
+}
+
+/*edit styles for the actual edit page once you click on edit a message*/
+
+.editbody form{
+    display: flex;
+    width: 28%;
+    border-radius: 20%;
+    margin-left: 35.5%;
+    margin-bottom: 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 5px 5px 4px black;
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.editmes h1 {
+    margin-bottom: 2%;
+}
+
+.editbody {
+    background-image: url("DiamondWall.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+/*Already Logged In Notice Page if user presses login, sign up on home screen Styles*/
+.alreadyloggedin {
+    background-image: url("Stars.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.LoggedInNotif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.LoggedInNotif header, main{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'bubblegum Sans';
+
+}
+
+/*Send Private Message Page Styles*/
+.sendprivmes {
+    background-image: url("RegWall.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.SendPrivMes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sendprivmes form{
+    display: flex;
+    width: 28%;
+    border-radius: 20%;
+    margin-left: 2.5%;
+    margin-bottom: 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 5px 5px 4px black;
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SendPrivMes h1 {
+    margin-left: 2.5%;
+    margin-bottom: 2%;
+    font-family: 'bubblegum Sans';
+}
+
+.MESBUTTON {
+    display: flex;
+    height: 6vh;
+    width:  9vw;
+    margin-top: 5%;
+    margin-right: 8%;
+    color: white;
+    background: linear-gradient(45deg, #00fffb, #000000);
+    box-shadow: 4px 4px 4px #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Private Message Page styles*/
+
+.privmes {
+    background-image: url("DiamondWall.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.privmeshead {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.privmes-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%; /* Take full width of the parent */
+    margin-bottom: 3%;
+}
+
+.clear-messages-form {
+    margin-left: auto; /* Pushes the form to the right */
+}
+
+.private-message {
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px; /* Padding around the text */
+    margin-bottom: 10px; /* Spacing between messages */
+    border-radius: 10px; /* Rounded corners */
+    word-wrap: break-word; /* Prevents long words from overflowing */
+    margin-left: 2%;
+    width: 65%;
+    max-width: 100%; /* Ensures the message box doesn't exceed the container width */
+    line-height: 1.5; /* Spacing between lines of text */
+    overflow-wrap: break-word; /* Ensures text breaks to prevent overflow */
+}
+
+/*Forgot Password Page Styles*/
+
+.forgotpassbody form{
+    display: flex;
+    width: 28%;
+    border-radius: 20%;
+    margin-left: 35.5%;
+    margin-bottom: 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 5px 5px 4px black;
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.forgotpass h1 {
+    margin-bottom: 2%;
+}
+
+.forgotpassbody {
+    background-image: url("DiamondWall.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+
+
+/* Styles for footer */
+footer {
+    background-color: #333; /* Background color for footer */
+    color: #fff; /* Text color for footer */
+    padding: 1.7rem; /* Adds padding to the footer */
+    text-align: center; /* Centers the text in the footer */
+    font-size: 1rem; /* Sets font size for the footer */
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10; /* This value must be higher than the z-index of elements that may cover the footer */  
+}
+
+
+#Termsbody {
+    background-color: #01745f;
+}
+
+.Terms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.Terms p {
+    margin-top: 1%;
+    line-height: 1.4em;
+    max-width: 80%;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.Terms h1 {
+    font-size: 4rem; 
+    text-align: center;
+}
+
+#Privacybody {
+    background-color:  #01745f;
+}
+
+.Privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.Privacy p {
+    margin-top: 1%;
+    line-height: 1.4em;
+    max-width: 80%;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.Privacy h1 {
+    font-size: 4rem; 
+    text-align: center;
+}
+
+.footerlinks {
+    display: inline-flex; /* Displays links in a row with space between them */
+    gap: 4rem;
+}
+
+.footerlinks a {
+    color: rgb(172, 172, 172); /* Set the default color to black */
+    text-decoration: none; /*removes the underline from links */
+}
+
+.footerlinks a:hover {
+    color: #0f5797;
+}
+
+
+/* Styles for autocomplete container */
+.autocomplete {
+    position: relative; /* Specifies the position relative to its normal position */
+    display: inline-block; /* Displays the element as an inline-level block container */
+}
+
+/* Styles for autocomplete items */
+.autocomplete-items {
+    position: absolute; /* Positions the autocomplete items relative to its closest positioned ancestor */
+    border: 1px solid #d4d4d4; /* Adds border to autocomplete items */
+    border-bottom: none; /* Removes bottom border */
+    border-top: none; /* Removes top border */
+    z-index: 99; /* Sets the stack order of the autocomplete items */
+    top: 100%; /* Positions the autocomplete items below the autocomplete container */
+    left: 0; /* Aligns the autocomplete items with the left edge of the autocomplete container */
+    right: 0; /* Aligns the autocomplete items with the right edge of the autocomplete container */
+}
+
+/* Styles for autocomplete item */
+.autocomplete-items div {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    background-color: #fff; /* Background color for autocomplete items */
+    border-bottom: 1px solid #d4d4d4; /* Adds bottom border to autocomplete items */
+}
+
+/* Styles for autocomplete item on hover */
+.autocomplete-items div:hover {
+    background-color: #e9e9e9; /* Background color change when hovering over autocomplete items */
+}
